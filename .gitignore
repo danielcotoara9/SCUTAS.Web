@@ -21,3 +21,10 @@ rad.json
 *.flf
 #Test results file
 TestResults.xml
+
+### .NET build output ###
+bin/
+obj/
+
+### Visual Studio ###
+.vs/
