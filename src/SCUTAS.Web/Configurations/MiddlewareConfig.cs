@@ -20,6 +20,7 @@ public static class MiddlewareConfig
     }
 
     app.UseFastEndpoints();
+    app.MapControllers();
 
     if (app.Environment.IsDevelopment())
     {

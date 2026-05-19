@@ -12,6 +12,7 @@ startupLogger.LogInformation("Starting web host");
 
 builder.Services.AddOptionConfigs(builder.Configuration, startupLogger, builder);
 builder.Services.AddServiceConfigs(startupLogger, builder);
+builder.Services.AddControllers();
 
 builder.Services.AddFastEndpoints()
                 .SwaggerDocument(o =>
