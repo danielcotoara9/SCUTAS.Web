@@ -14,7 +14,7 @@
   "identity": "Ardalis.MinimalClean.Template",
   "name": "ASP.NET Minimal Clean Architecture Solution",
   "shortName": "min-clean",
-  "sourceName": "MinimalSCUTAS.Web",
+  "sourceName": "MinimalSCUTAS",
   "templateFileExtensions": [ ".cs", ".csproj", ".slnx" ],
   "preferNameDirectory": true,
   "sources": [

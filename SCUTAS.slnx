@@ -1,0 +1,33 @@
+<Solution>
+  <Configurations>
+    <Platform Name="Any CPU" />
+    <Platform Name="x64" />
+    <Platform Name="x86" />
+  </Configurations>
+  <Folder Name="/Solution Items/">
+    <File Path=".editorconfig" />
+    <File Path=".template.config/template.json" />
+    <File Path="CleanArchitecture.nuspec" />
+    <File Path="Directory.Build.props" />
+    <File Path="Directory.Packages.props" />
+  </Folder>
+  <Folder Name="/src/">
+    <Project Path="src/SCUTAS.Core/SCUTAS.Core.csproj" />
+    <Project Path="src/SCUTAS.Infrastructure/SCUTAS.Infrastructure.csproj" />
+    <Project Path="src/SCUTAS.UseCases/SCUTAS.UseCases.csproj" />
+    <Project Path="src/SCUTAS.Web/SCUTAS.Web.csproj" />
+  </Folder>
+  <Folder Name="/src/_aspire/">
+    <Project Path="src/SCUTAS.AspireHost/SCUTAS.AspireHost.csproj" />
+    <Project Path="src/SCUTAS.ServiceDefaults/SCUTAS.ServiceDefaults.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/SCUTAS.FunctionalTests/SCUTAS.FunctionalTests.csproj">
+      <BuildDependency Project="src/SCUTAS.Web/SCUTAS.Web.csproj" />
+    </Project>
+    <Project Path="tests/SCUTAS.IntegrationTests/SCUTAS.IntegrationTests.csproj">
+      <BuildDependency Project="src/SCUTAS.Infrastructure/SCUTAS.Infrastructure.csproj" />
+    </Project>
+    <Project Path="tests/SCUTAS.UnitTests/SCUTAS.UnitTests.csproj" />
+  </Folder>
+</Solution>

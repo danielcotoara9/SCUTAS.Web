@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<NsDepCopConfig>
+    <Allowed From="*" To="*" />
+
+    <Disallowed From="MinimalSCUTAS.Web.Domain.*"
+				To="MinimalSCUTAS.Web.Infrastructure.*" />
+    
+    <Disallowed From="MinimalSCUTAS.Web.CartFeatures.*"
+				To="MinimalSCUTAS.Web.Infrastructure.*" />
+    
+    <Disallowed From="MinimalSCUTAS.Web.ProductFeatures.*"
+				To="MinimalSCUTAS.Web.Infrastructure.*" />
+    
+    <Disallowed From="MinimalSCUTAS.Web.Domain.OrderAggregate.*"
+				To="MinimalSCUTAS.Web.Domain.CartAggregate.*" />
+
+    <AnalyzerConfig>
+        <IssueKind Name="IllegalDependency" Severity="Error" />
+    </AnalyzerConfig>
+</NsDepCopConfig>

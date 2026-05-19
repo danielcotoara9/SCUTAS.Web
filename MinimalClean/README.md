@@ -1,4 +1,4 @@
-# MinimalSCUTAS.Web
+# MinimalSCUTAS
 
 Welcome to your new project generated with the **Minimal Clean Architecture** template!
 
@@ -13,10 +13,10 @@ This is a streamlined, single-project Vertical Slice Architecture (VSA) that fol
 dotnet build
 
 # Run the application
-dotnet run --project src/MinimalSCUTAS.Web.Web
+dotnet run --project src/MinimalSCUTAS.Web
 
 # Or run with Aspire (if using)
-dotnet run --project src/MinimalSCUTAS.Web.AspireHost
+dotnet run --project src/MinimalSCUTAS.AspireHost
 ```
 
 ### Database Setup
@@ -26,7 +26,7 @@ This template uses **SQL Server in a container** managed by Aspire. When you run
 #### Option 1: Run with Aspire (Recommended)
 
 ```powershell
-dotnet run --project src/MinimalSCUTAS.Web.AspireHost
+dotnet run --project src/MinimalSCUTAS.AspireHost
 ```
 
 The SQL Server container and database are automatically provisioned and migrations are applied on startup.
@@ -36,8 +36,8 @@ The SQL Server container and database are automatically provisioned and migratio
 If running the Web project without Aspire, update `appsettings.json` to use LocalDB:
 
 ```powershell
-dotnet ef database update -c AppDbContext -p src/MinimalSCUTAS.Web.Web -s src/MinimalSCUTAS.Web.Web
-dotnet run --project src/MinimalSCUTAS.Web.Web
+dotnet ef database update -c AppDbContext -p src/MinimalSCUTAS.Web -s src/MinimalSCUTAS.Web
+dotnet run --project src/MinimalSCUTAS.Web
 ```
 
 ## Project Structure
@@ -45,7 +45,7 @@ dotnet run --project src/MinimalSCUTAS.Web.Web
 This template uses a **single Web project** organized by **vertical slices** (features):
 
 ```text
-src/MinimalSCUTAS.Web.Web/
+src/MinimalSCUTAS.Web/
 ├── Domain/                    # Domain entities and aggregates
 │   ├── CartAggregate/
 │   ├── OrderAggregate/

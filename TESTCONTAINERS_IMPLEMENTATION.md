@@ -14,13 +14,13 @@ Successfully migrated functional tests from in-memory database to **Testcontaine
 <PackageVersion Include="Testcontainers.MsSql" Version="4.3.0" />
 ```
 
-**Updated `tests\SCUTAS.Web.FunctionalTests\SCUTAS.Web.FunctionalTests.csproj`:**
+**Updated `tests\SCUTAS.FunctionalTests\SCUTAS.FunctionalTests.csproj`:**
 - Removed: `Microsoft.EntityFrameworkCore.InMemory`
 - Added: `Testcontainers` and `Testcontainers.MsSql`
 
 ### 2. CustomWebApplicationFactory
 
-**File:** `tests\SCUTAS.Web.FunctionalTests\CustomWebApplicationFactory.cs`
+**File:** `tests\SCUTAS.FunctionalTests\CustomWebApplicationFactory.cs`
 
 Key changes:
 - Implements `IAsyncLifetime` for proper async initialization/cleanup
@@ -74,7 +74,7 @@ dotnet test
 
 Or specifically for functional tests:
 ```bash
-dotnet test tests\SCUTAS.Web.FunctionalTests\SCUTAS.Web.FunctionalTests.csproj
+dotnet test tests\SCUTAS.FunctionalTests\SCUTAS.FunctionalTests.csproj
 ```
 
 ## Notes
